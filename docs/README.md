@@ -26,7 +26,7 @@ Os PDFs ficam em [`pdfs/`](pdfs/). Foram copiados byte a byte (os hashes abaixo 
 | Arquivo | Título original | Páginas | Descrição | Documento Markdown relacionado |
 | --- | --- | :---: | --- | --- |
 | [Ficha_Tecnica_R2-D2.pdf](pdfs/Ficha_Tecnica_R2-D2.pdf) | *R2-D2: Droid Interativo - Ficha Técnica* | 4 | Tabela com especificações do hardware, particionamento do SSD, hipervisor e máquinas virtuais | [hardware.md](hardware.md), [software-e-infraestrutura.md](software-e-infraestrutura.md) |
-| [Cyber_R2-D2.pdf](pdfs/Cyber_R2-D2.pdf) | *R2-D2: Droid Interativo - Cyber* | 4 | Segurança cibernética e hardening: medidas preventivas, auditoria Nmap e regras de firewall | [seguranca.md](seguranca.md) |
+| [Cyber_R2-D2.pdf](pdfs/Cyber_R2-D2.pdf) | *R2-D2: Droid Interativo - Cyber* | 6 | Segurança cibernética e hardening: medidas preventivas, regra do ngrok, duas varreduras Nmap, RDP com NLA e regra de firewall | [seguranca.md](seguranca.md) |
 | [Arquitetura_R2-D2.pdf](pdfs/Arquitetura_R2-D2.pdf) | *R2-D2: Droid Interativo - Arquitetura* | 12 | Confecção do casemod, 16 figuras, medidas, materiais e ferramentas | [arquitetura.md](arquitetura.md), [hardware.md](hardware.md) |
 
 **Integridade (SHA-256):**
@@ -34,7 +34,7 @@ Os PDFs ficam em [`pdfs/`](pdfs/). Foram copiados byte a byte (os hashes abaixo 
 | Arquivo | SHA-256 |
 | --- | --- |
 | Ficha_Tecnica_R2-D2.pdf | `1fa457ebe4429da4e17c9404b7d97295e645352df1229e8be663d97e5a811ae6` |
-| Cyber_R2-D2.pdf | `25ad727e25e148d6fe1de94dec1c6d8309fae84f2dfc0882471a78a7822407c8` |
+| Cyber_R2-D2.pdf | `1c14e65ba16f42d2b4b0f2e81d0a47b0135262bc5ba67667879476b40cdfe6cb` |
 | Arquitetura_R2-D2.pdf | `6372dc68a547a83eb4e790ff66793e9ba01c9124e76aa378ef588164e48ee7c7` |
 
 Os três PDFs foram exportados do Google Docs e têm a mesma capa: Centro Universitário UniFECAF, Campus Sede, EXPOTEC, Taboão da Serra - SP, 2026. As versões editáveis (DOCX/Google Docs) ficam fora do repositório.

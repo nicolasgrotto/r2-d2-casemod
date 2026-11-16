@@ -121,7 +121,7 @@ Registrados na documentação do casemod e dos repositórios:
 | --- | --- | --- |
 | Casemod | Dissipar calor sem a placa-mãe envergar | Suporte em "U" que cria vão atrás do soquete ([arquitetura.md](arquitetura.md#7-desafios-e-soluções)) |
 | Casemod | Dar rigidez ao torso | Papel Paraná em parede dupla |
-| Infraestrutura | Serviços desnecessários expostos na VM | Varredura Nmap e regra de firewall que bloqueia as portas 5357 e 5985 ([seguranca.md](seguranca.md)) |
+| Infraestrutura | Serviços desnecessários expostos na VM | Varredura Nmap, regra de firewall que bloqueia as portas 5357 e 5985 e 2.ª varredura de validação ([seguranca.md](seguranca.md)) |
 | Infraestrutura | Com dual boot, só um sistema funciona por vez, o que impediria auditar a rede com o Linux enquanto o Windows está em uso | Mudança de última hora: o Parrot Security OS passou a rodar em VM, ao lado do Windows |
 | Duel of Fates | Navegador mantendo versão antiga (cache de até 10 min no GitHub Pages) | Arquivos exportados com o hash do commit no nome |
 | Duel of Fates | GitHub Pages não permite os cabeçalhos para threads na Web | Exportação Web sem threads, que dispensa cabeçalhos especiais |

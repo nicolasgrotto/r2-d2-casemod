@@ -131,11 +131,11 @@ Portas de rede da VM, depois do hardening:
 | Porta | Serviço | Situação |
 | --- | --- | --- |
 | 80/tcp | IIS (site padrão, sem conteúdo do projeto) | Exposta na rede local |
-| 3389/tcp | RDP (administração remota) | Habilitada e liberada no Windows Defender Firewall |
+| 3389/tcp | RDP (administração remota) | Habilitada e liberada no Windows Defender Firewall; acessível só na rede local, com NLA |
 | 5000/tcp | Site do IIS com o Duel of Fates (destino do ngrok) | Somente em loopback (`localhost`) |
 | 5357/tcp e 5985/tcp | HTTPAPI (descoberta de dispositivos e WinRM) | Bloqueadas por regra de firewall |
 
-Detalhes da regra e da varredura em [seguranca.md](seguranca.md).
+Detalhes da regra e das varreduras em [seguranca.md](seguranca.md).
 
 
 ## 8. Publicação do Duel of Fates
@@ -156,7 +156,7 @@ Esses dados mostram que a build é compatível com um servidor web estático, co
 
 ## 9. ngrok e fluxo de acesso externo
 
-O **ngrok** é usado para disponibilizar a aplicação para fora da rede local. Ele cria um **túnel reverso** com acesso por **HTTPS (TLS)**; por ser reverso (a conexão parte da máquina de dentro para fora), esse tipo de túnel dispensa, em geral, redirecionamento de portas no roteador. O PDF Cyber informa que foram aplicadas *Traffic Policies* no túnel, que funcionam como gateway de segurança ao filtrar requisições antes de o tráfego chegar ao serviço local em `localhost:5000`.
+O **ngrok** é usado para disponibilizar a aplicação para fora da rede local. Ele cria um **túnel reverso** com acesso por **HTTPS (TLS)**; por ser reverso (a conexão parte da máquina de dentro para fora), esse tipo de túnel dispensa, em geral, redirecionamento de portas no roteador. Uma *Traffic Policy* no túnel limita o tráfego a 60 requisições a cada 60 segundos por IP do cliente antes de ele chegar ao serviço local em `localhost:5000` ([seguranca.md](seguranca.md#21-regra-de-limitação-de-taxa-no-ngrok)).
 
 ```mermaid
 flowchart LR

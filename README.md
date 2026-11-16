@@ -114,7 +114,7 @@ A iluminação interna e as caixas de som, na cabeça, são ligadas ao computado
 
 O SSD de 240 GB é dividido em **C:** (97 GB, Windows 10), **D:** (78 GB, máquinas virtuais em discos `.vdi`), partições de sistema e cerca de 44 GB não alocados. As VMs usam rede em modo Bridge.
 
-Na segurança, a equipe aplicou DNS anti-malware (Cloudflare 1.1.1.2 e 1.0.0.2), Traffic Policy no ngrok, Windows Defender, Firejail no Parrot, ProtonVPN, atualização dos sistemas e senhas fortes. Uma varredura **Nmap** a partir do Parrot revelou portas desnecessárias no servidor, e uma **regra de firewall** bloqueou as portas 5357 e 5985, deixando expostos apenas o IIS (80) e o RDP (3389).
+Na segurança, a equipe aplicou DNS anti-malware (Cloudflare 1.1.1.2 e 1.0.0.2), limite de requisições por IP no ngrok (Traffic Policy), Windows Defender, Firejail no Parrot, ProtonVPN, atualização dos sistemas e senhas fortes. Uma varredura **Nmap** a partir do Parrot revelou portas desnecessárias no servidor; uma **regra de firewall** bloqueou as portas 5357 e 5985, e o RDP foi habilitado apenas na rede local, com NLA. Uma 2.ª varredura confirmou que ficaram expostos apenas o IIS (80) e o RDP (3389).
 
 Detalhes em [docs/software-e-infraestrutura.md](docs/software-e-infraestrutura.md) e [docs/seguranca.md](docs/seguranca.md).
 
