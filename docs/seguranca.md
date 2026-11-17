@@ -13,6 +13,7 @@
 3. [Auditoria de portas com Nmap](#3-auditoria-de-portas-com-nmap)
 4. [Hardening do Windows Server 2022](#4-hardening-do-windows-server-2022)
 5. [Riscos identificados e mitigação](#5-riscos-identificados-e-mitigação)
+6. [Tríade CIA aplicada ao projeto](#6-tríade-cia-aplicada-ao-projeto)
 
 ---
 
@@ -119,3 +120,39 @@ Riscos identificados pela equipe no diagnóstico e nas medidas descritas:
 | Vulnerabilidades conhecidas (CVEs) | Pacotes desatualizados | Atualização integral dos três sistemas | Mitigado no momento da atualização |
 | Ataques de força bruta e de dicionário | Contas administrativas | Senhas fortes e padronizadas | Mitigado (declarado) |
 | Tráfego externo do host exposto | Rede do host | ProtonVPN em interface dedicada | Mitigado |
+
+## 6. Tríade CIA aplicada ao projeto
+
+A segurança da informação se apoia em três pilares, conhecidos como tríade CIA: **confidencialidade**, **integridade** e **disponibilidade**. No R2-D2 Casemod, as medidas de segurança foram pensadas para cobrir os três, já que o computador hospeda uma aplicação acessível pela internet.
+
+**Confidencialidade: somente quem deve ter acesso, tem.** No projeto, isso significa que só as pessoas autorizadas podem administrar o servidor, e que o tráfego não fica exposto durante o acesso externo.
+
+- O acesso remoto ao Windows Server (RDP) fica restrito à rede local e exige autenticação em nível de rede (NLA).
+- O acesso externo ao jogo passa por um túnel ngrok com criptografia HTTPS/TLS.
+- A porta 5000, onde o site roda no IIS, aceita conexões apenas da própria máquina (`localhost`).
+- Uma regra no firewall bloqueia as portas 5357 e 5985, ligadas à descoberta de dispositivos e ao gerenciamento remoto do Windows.
+- As contas administrativas usam senhas fortes, e o host usa VPN (ProtonVPN) para proteger o tráfego externo.
+
+**Integridade: a informação não é alterada de forma indevida.** Aqui o objetivo é impedir que o servidor, o sistema e a aplicação sejam modificados por quem não deveria.
+
+- O Windows Defender e o DNS com filtro de malware da Cloudflare (`1.1.1.2` e `1.0.0.2`) ajudam a barrar arquivos e domínios maliciosos.
+- Os sistemas são mantidos atualizados, o que corrige falhas conhecidas.
+- A varredura com Nmap identificou serviços desnecessários, que foram bloqueados. Menos serviços abertos significa menos pontos de ataque.
+- O Firejail, no Parrot, executa aplicações em ambiente isolado (*sandbox*).
+- O servidor roda em uma máquina virtual separada do sistema principal, o que limita o impacto de uma eventual alteração indevida.
+
+**Disponibilidade: sistemas e dados acessíveis quando necessário.** Para uma exposição como a do EXPOTEC, o jogo precisa continuar no ar mesmo se alguém tentar sobrecarregar o servidor.
+
+- A Traffic Policy do ngrok limita cada IP a 60 requisições a cada 60 segundos, o que reduz o risco de sobrecarga e de ataques de negação de serviço.
+- Só as portas 80 (IIS) e 3389 (RDP) permanecem abertas, o que foi confirmado pela segunda varredura do Nmap.
+- A virtualização permite que o Windows Server e o Parrot funcionem ao mesmo tempo, então os testes de segurança são feitos sem tirar o servidor do ar.
+
+**Resumo**
+
+| Pilar | Principais medidas do projeto |
+| --- | --- |
+| Confidencialidade | RDP restrito à rede local com NLA, HTTPS/TLS no ngrok, `localhost` na porta 5000, firewall bloqueando as portas 5357 e 5985, senhas fortes e VPN |
+| Integridade | Windows Defender, DNS anti-malware, atualizações, redução de serviços expostos, Firejail e isolamento em máquina virtual |
+| Disponibilidade | Limite de requisições por IP no ngrok, apenas as portas 80 e 3389 abertas e máquinas virtuais em execução simultânea |
+
+Algumas medidas contribuem para mais de um pilar. O firewall, por exemplo, protege a confidencialidade e também reduz a superfície de ataque.
