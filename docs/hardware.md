@@ -2,7 +2,7 @@
 
 > **Responsáveis principais:** Gabriel Cardoso e Nicolas Egea (montagem dos componentes e integração do hardware ao casemod). Todos os integrantes participaram do projeto; veja [equipe.md](equipe.md).
 >
-> **Fonte primária:** [Ficha_Tecnica_R2-D2.pdf](pdfs/Ficha_Tecnica_R2-D2.pdf) e [Arquitetura_R2-D2.pdf](pdfs/Arquitetura_R2-D2.pdf).
+> **Documentos em PDF:** [Ficha_Tecnica_R2-D2.pdf](pdfs/Ficha_Tecnica_R2-D2.pdf) e [Arquitetura_R2-D2.pdf](pdfs/Arquitetura_R2-D2.pdf)
 
 ← [Voltar ao índice](README.md)
 
@@ -12,7 +12,7 @@ O computador do casemod é baseado em um **Lenovo ThinkCentre M83** (modelo 10AJ
 
 ## 2. Especificações
 
-Os valores abaixo vêm da Ficha Técnica. Nenhum modelo ou capacidade foi acrescentado além dela.
+Especificações do computador:
 
 | Componente | Especificação |
 | --- | --- |
@@ -45,8 +45,8 @@ A organização interna do torso (três níveis sob medida) está detalhada em [
 
 <table>
   <tr>
-    <td align="center"><img src="../assets/images/construcao/fig-12.jpg" width="300" alt="Espaço interno do torso com os componentes"><br><sub>Espaço interno do torso (Figura 12 do PDF)</sub></td>
-    <td align="center"><img src="../assets/images/construcao/fig-14.jpg" width="200" alt="Placa-mãe sobre o suporte em U"><br><sub>Suporte da placa-mãe (Figura 14 do PDF)</sub></td>
+    <td align="center"><img src="../assets/images/construcao/fig-12.jpg" width="300" alt="Espaço interno do torso com os componentes"><br><sub>Espaço interno do torso (Figura 12)</sub></td>
+    <td align="center"><img src="../assets/images/construcao/fig-14.jpg" width="200" alt="Placa-mãe sobre o suporte em U"><br><sub>Suporte da placa-mãe (Figura 14)</sub></td>
     <td align="center"><img src="../assets/images/casemod/casemod-acesso-traseiro-escuro.jpg" width="220" alt="Acesso traseiro aberto, com cabos ligados à placa-mãe"><br><sub>Acesso traseiro com cabos ligados (fotografia)</sub></td>
   </tr>
 </table>

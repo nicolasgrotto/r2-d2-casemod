@@ -7,7 +7,7 @@
 >
 > Todos os integrantes participaram do projeto; veja [equipe.md](equipe.md).
 >
-> **Fontes primárias:** [Ficha_Tecnica_R2-D2.pdf](pdfs/Ficha_Tecnica_R2-D2.pdf) e [Cyber_R2-D2.pdf](pdfs/Cyber_R2-D2.pdf). Informações sobre o Duel of Fates e o Companion vêm dos respectivos repositórios (links na [seção 6](#6-projetos-hospedados-ou-executados-no-computador)).
+> **Documentos em PDF:** [Ficha_Tecnica_R2-D2.pdf](pdfs/Ficha_Tecnica_R2-D2.pdf) e [Cyber_R2-D2.pdf](pdfs/Cyber_R2-D2.pdf). O Duel of Fates e o Companion têm repositórios próprios (links na [seção 6](#6-projetos-hospedados-ou-executados-no-computador)).
 
 ← [Voltar ao índice](README.md)
 
@@ -63,7 +63,7 @@ O armazenamento físico é um SSD de 240 GB (capacidade utilizável de 223,56 GB
 | **C:** | 97,00 GB | NTFS | Windows 10 Pro (sistema base / host) |
 | **D:** | 78,13 GB | NTFS | Partição de virtualização (máquinas virtuais) |
 | Espaço secundário | 44,36 GB | — | Não alocado |
-| Espaço secundário | 2,47 GB | — | Partição primária (finalidade não informada) |
+| Espaço secundário | 2,47 GB | — | Partição primária |
 | Sistema / EFI / recuperação | 100 MB + 556 MB + 977 MB | — | Partições de sistema |
 
 ```mermaid
@@ -112,7 +112,7 @@ O computador do casemod funciona como plataforma para executar e hospedar os pro
 | **Duel of Fates** | [nicolasgrotto/duel-of-fates](https://github.com/nicolasgrotto/duel-of-fates) | Godot 4.7 (GDScript); exportação Web estática | Hospedado na VM Windows Server 2022, em um site do IIS na porta 5000, com acesso externo via ngrok |
 | **R2 Desktop Companion** | [nicolasgrotto/r2-desktop-companion](https://github.com/nicolasgrotto/r2-desktop-companion) | Python 3.12+ e PySide6; aplicativo desktop para Windows 10/11 x64 | Compatível com o Windows 10 22H2 do host |
 
-O repositório do Companion afirma que ele é **independente do casemod**, funciona offline e só acessa a rede quando o usuário pede uma atualização manual. O README do Companion também cita "scripts de som" do casemod, mas, segundo a equipe, **não existe nenhum script de som**: a iluminação e as caixas são ligadas por USB, sem microcontrolador. A equipe removerá essa menção do README do Companion.
+O Companion é **independente do casemod**: funciona offline e só acessa a rede quando o usuário pede uma atualização manual. O casemod não usa scripts de som: a iluminação e as caixas são ligadas por USB, sem microcontrolador.
 
 ## 7. Windows Server 2022 e IIS
 
@@ -124,7 +124,7 @@ A VM `wswerv` roda o **Microsoft Windows Server 2022** e é responsável por:
 
 A hospedagem do jogo no IIS e o acesso externo via ngrok foram feitos por **Nicolas Oliveira**.
 
-A Ficha Técnica descreve o servidor web como "IIS 10.0 (localhost:5000 / Porta 80)". Segundo a equipe, a **porta 5000** é a porta alocada no IIS para o site do **Duel of Fates**, e é ela que o **ngrok expõe**. O PDF Cyber informa que, na varredura Nmap, a **porta 80/tcp** respondeu como Microsoft IIS httpd 10.0 e que a porta 5000 (`localhost:5000`) permanece restrita à interface de loopback, sem acesso direto pela rede local. Segundo a equipe, a **porta 80 não serve nenhum conteúdo do projeto**: deve ser apenas o site padrão que o IIS habilita naturalmente na instalação.
+A porta **5000** é a porta alocada no IIS para o site do **Duel of Fates**, e é ela que o **ngrok expõe**. Ela permanece restrita à interface de loopback (`localhost:5000`), sem acesso direto pela rede local. A porta **80/tcp** responde como Microsoft IIS httpd 10.0 e serve apenas o site padrão do IIS, sem conteúdo do projeto.
 
 Portas de rede da VM, depois do hardening:
 
@@ -140,7 +140,7 @@ Detalhes da regra e das varreduras em [seguranca.md](seguranca.md).
 
 ## 8. Publicação do Duel of Fates
 
-O Duel of Fates foi desenvolvido em repositório independente e depois hospedado na VM. Segundo o repositório do jogo:
+O Duel of Fates foi desenvolvido em repositório independente e depois hospedado na VM. Características da exportação Web:
 
 | Característica da exportação Web | Valor |
 | --- | --- |

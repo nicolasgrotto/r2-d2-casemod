@@ -189,7 +189,7 @@ Evolução completa em [docs/desenvolvimento.md](docs/desenvolvimento.md).
 
 | Documento | Conteúdo |
 | --- | --- |
-| [docs/README.md](docs/README.md) | Índice e PDFs originais |
+| [docs/README.md](docs/README.md) | Índice e documentos em PDF |
 | [docs/arquitetura.md](docs/arquitetura.md) | Construção do casemod |
 | [docs/hardware.md](docs/hardware.md) | Componentes e integração |
 | [docs/software-e-infraestrutura.md](docs/software-e-infraestrutura.md) | Sistemas, virtualização, IIS e ngrok |
@@ -197,7 +197,7 @@ Evolução completa em [docs/desenvolvimento.md](docs/desenvolvimento.md).
 | [docs/desenvolvimento.md](docs/desenvolvimento.md) | Evolução do projeto |
 | [docs/equipe.md](docs/equipe.md) | Equipe e matriz RACI |
 
-**PDFs originais da equipe:** [Ficha Técnica](docs/pdfs/Ficha_Tecnica_R2-D2.pdf) · [Cyber](docs/pdfs/Cyber_R2-D2.pdf) · [Arquitetura](docs/pdfs/Arquitetura_R2-D2.pdf)
+**Documentos em PDF:** [Ficha Técnica](docs/pdfs/Ficha_Tecnica_R2-D2.pdf) · [Cyber](docs/pdfs/Cyber_R2-D2.pdf) · [Arquitetura](docs/pdfs/Arquitetura_R2-D2.pdf)
 
 ## Considerações finais
 

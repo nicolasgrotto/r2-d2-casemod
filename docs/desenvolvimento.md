@@ -27,8 +27,6 @@ O R2-D2 Casemod é um projeto acadêmico do **Centro Universitário UniFECAF (Ca
 
 A concepção do casemod precedeu a construção: a equipe definiu primeiro o tema, o tamanho, o material e a articulação das pernas ([arquitetura.md](arquitetura.md#1-conceito-e-planejamento)).
 
-> **Concepção × implementação.** Este documento separa a data em que cada projeto foi *pensado* da data em que sua *implementação* começou.
-
 
 ## 2. Principais etapas
 
@@ -43,18 +41,18 @@ flowchart LR
 
 ## 3. Cronologia
 
-Períodos informados pela equipe, com a evidência que os sustenta.
+Períodos de cada atividade:
 
-| Atividade | Período | Evidência disponível |
-| --- | --- | --- |
-| Arquitetura e construção do casemod | Setembro até o início de novembro de 2026 | PDF de Arquitetura (sem datas por etapa) |
-| Desenvolvimento do Duel of Fates | Meados de outubro até 15 de novembro de 2026 | Git: primeiro commit em 19/10/2026; tags v1.0.0 (04/11), v1.1.0 e v1.1.1 (06/11). Último commit público em 06/11; o trabalho posterior está só no repositório local, ainda não enviado |
-| Montagem do computador e configuração dos softwares | Final de outubro até 14 de novembro de 2026 | Ficha Técnica e PDF Cyber (sem datas) |
-| Brainstorming do Companion | Início de novembro de 2026 | Informado pela equipe |
-| Desenvolvimento do Companion | Aproximadamente de 8 a 15 de novembro de 2026 | Git: primeiro commit em 09/11/2026; tags de v1.0.1 (09/11) a v1.2.1 (13/11); último commit em 14/11 |
-| Integração e finalização | Novembro de 2026 | Informado pela equipe |
+| Atividade | Período |
+| --- | --- |
+| Arquitetura e construção do casemod | Setembro até o início de novembro de 2026 |
+| Desenvolvimento do Duel of Fates | Meados de outubro até 15 de novembro de 2026 |
+| Montagem do computador e configuração dos softwares | Final de outubro até 14 de novembro de 2026 |
+| Brainstorming do Companion | Início de novembro de 2026 |
+| Desenvolvimento do Companion | Aproximadamente de 8 a 15 de novembro de 2026 |
+| Integração e finalização | Novembro de 2026 |
 
-Visão por mês (sem dias específicos):
+Visão por mês:
 
 | Atividade | Setembro | Outubro | Início de novembro | Meados de novembro (até 15) |
 | --- | :---: | :---: | :---: | :---: |
@@ -64,7 +62,6 @@ Visão por mês (sem dias específicos):
 | Companion: brainstorming (░) e desenvolvimento (■) | | | ░ | ■ |
 | Integração e finalização | | | ■ | ■ |
 
-*Fontes: períodos do briefing do projeto; datas de Git extraídas dos metadados dos repositórios (podem diferir dos dias efetivos de trabalho).*
 
 ## 4. Construção do casemod
 
@@ -76,16 +73,13 @@ Do final de outubro a 14 de novembro, o hardware foi montado no torso e integrad
 
 ## 6. Desenvolvimento do Duel of Fates
 
-**Duel of Fates** é um jogo de duelo de lâminas de energia em visão lateral, feito em **Godot 4.7 com GDScript**, com temática de ficção científica. O repositório informa duelos 1 contra 1, 11 personagens, 10 arenas, vários modos (história, duelo, batalhas, operações e combate de naves), português e inglês, teclado e gamepad.
+**Duel of Fates** é um jogo de duelo de lâminas de energia em visão lateral, feito em **Godot 4.7 com GDScript**, com temática de ficção científica. O jogo tem duelos 1 contra 1, 11 personagens, 10 arenas, vários modos (história, duelo, batalhas, operações e combate de naves), português e inglês, teclado e gamepad.
 
 | Marco | Data (Git) |
 | --- | --- |
 | Primeiro commit (projeto Godot iniciado) | 19/10/2026 |
 | Tag v1.0.0 | 04/11/2026 |
 | Tags v1.1.0 e v1.1.1 | 06/11/2026 |
-| Último commit nas branches públicas | 06/11/2026 |
-
-O desenvolvimento posterior a 06/11/2026 está **apenas no repositório local** e será enviado ao GitHub depois; os marcos acima refletem só o que já foi publicado.
 
 Para a infraestrutura, o ponto relevante é a **exportação Web estática**, publicada no GitHub Pages e hospedada também na VM do casemod ([software-e-infraestrutura.md](software-e-infraestrutura.md#8-publicação-do-duel-of-fates)). O repositório é independente: [nicolasgrotto/duel-of-fates](https://github.com/nicolasgrotto/duel-of-fates).
 
@@ -95,7 +89,7 @@ Para a infraestrutura, o ponto relevante é a **exportação Web estática**, pu
 
 | Marco | Data (Git) |
 | --- | --- |
-| Brainstorming | Início de novembro de 2026 (informado pela equipe) |
+| Brainstorming | Início de novembro de 2026 |
 | Primeiro commit | 09/11/2026 |
 | Tags v1.0.1 a v1.2.1 | 09/11 a 13/11/2026 |
 | Último commit | 14/11/2026 |
@@ -104,18 +98,18 @@ O repositório é independente: [nicolasgrotto/r2-desktop-companion](https://git
 
 ## 8. Integração dos projetos
 
-Pontos de contato comprovados nos repositórios e nos PDFs:
+Pontos de contato entre os projetos:
 
 | De | Para | Natureza |
 | --- | --- | --- |
 | Companion (menu Ferramentas → Minigames) | Duel of Fates | O Companion abre o endereço do jogo no navegador padrão; não incorpora nem baixa o jogo |
 | Computador do casemod (VM Windows Server 2022) | Duel of Fates | Hospedagem em um site do IIS na porta 5000, exposto externamente via ngrok |
-| Companion | Casemod | Independente: funciona em qualquer Windows 10/11 x64 e não depende do casemod. Não há scripts de som no casemod; a menção a eles no README do Companion será removida |
+| Companion | Casemod | Independente: funciona em qualquer Windows 10/11 x64 e não depende do casemod. |
 
 
 ## 9. Desafios e soluções
 
-Registrados na documentação do casemod e dos repositórios:
+Principais desafios e soluções:
 
 | Área | Desafio | Solução |
 | --- | --- | --- |

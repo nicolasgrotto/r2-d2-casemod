@@ -2,7 +2,7 @@
 
 > **Responsável principal:** Heitor Resende (arquitetura, planejamento estrutural e construção física). Todos os integrantes participaram do projeto; veja [equipe.md](equipe.md).
 >
-> **Fonte primária:** [Arquitetura_R2-D2.pdf](pdfs/Arquitetura_R2-D2.pdf) (documento original da equipe). As figuras abaixo foram extraídas desse PDF.
+> **Documento em PDF:** [Arquitetura_R2-D2.pdf](pdfs/Arquitetura_R2-D2.pdf)
 
 ← [Voltar ao índice](README.md)
 
@@ -49,8 +49,6 @@ O casemod é dividido em **cabeça (cúpula)**, **torso cilíndrico** e **duas p
 | **Detalhes visuais** | Papel laminado azul, E.V.A., plástico acrílico com celofane azul atrás (quadrados luminosos), celofane vermelho (círculo vermelho), fundo de lata de refrigerante pintado de preto (olho principal) e luvas de PVC (¾) pintadas de prata (projetores simulados). |
 | **Acessos** | Porta de acesso traseira no torso para ligar os cabos à placa-mãe, e botão *Power* na frente, sinalizado por LED verde. |
 
-Observação sobre o terceiro pé: ele aparece nas fotografias do casemod, mas o PDF não descreve sua construção.
-
 ### Fotografias do resultado externo
 
 <table>
@@ -87,7 +85,7 @@ flowchart TB
     CABECA --- TORSO
 ```
 
-*Esquema conceitual, sem escala, baseado no texto do PDF de Arquitetura.*
+*Esquema conceitual, sem escala.*
 
 ### Detalhes dos três níveis do torso
 
@@ -112,7 +110,7 @@ O hardware instalado está descrito em [hardware.md](hardware.md).
 
 Altura total (dos pés ao topo da cúpula): **80 cm**. Circunferência total (contando pernas e torso): **144 cm**.
 
-As medidas por componente foram conferidas contra o croqui manuscrito original (Figura 15).
+As medidas por componente estão no croqui da Figura 15.
 
 | Componente | Medidas |
 | --- | --- |
@@ -155,7 +153,7 @@ Foram criados primeiro o esqueleto do torso e o da cabeça.
 
 ### Etapa 2 — Revestimento e reforço da cabeça
 
-O esqueleto da cabeça foi revestido com mais papelão e com uma mistura de maizena e cola. As pernas também foram construídas nesta fase, mas o PDF informa que não há fotografias dessa etapa.
+O esqueleto da cabeça foi revestido com mais papelão e com uma mistura de maizena e cola. As pernas também foram construídas nesta fase, mas não há fotografias dessa etapa.
 
 <p align="center"><img src="../assets/images/construcao/fig-02.jpg" width="360" alt="Cabeça revestida e reforçada"><br><em>Figura 2 — Cabeça revestida e reforçada. Fonte: autoria própria.</em></p>
 
@@ -214,7 +212,7 @@ Registro das medidas finais em croqui (Figura 15, [seção 4](#4-dimensões)).
 
 ## 7. Desafios e soluções
 
-Problemas de projeto cuja solução o PDF descreve. Alguns são deduzidos da solução descrita, pois o PDF não os apresenta como "desafio"; não há registro de dificuldades adicionais.
+Principais problemas de projeto e as soluções adotadas.
 
 | Desafio | Solução adotada |
 | --- | --- |
